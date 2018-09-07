@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../JS/jquery.js"></script>
+    <script src="../JS/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <h1>{{title | uppercase}}</h1>
+    </div>
+    <div id="demo2" style="margin-bottom:20px">
+            自定义过滤器
+            <input type="text" v-model="message" />
+            <span v-text="message | reverse"></span>
+    </div>
+    <div style="background-color:#088880">asdfasdfasdfasdfasdfasdfadsfadsfasdfasdfadsfa</div>
+    <!--<div id="demo3" style="margin-bottom:20px">
+        自定义过滤器--双向过滤
+        <input type="text" v-model="money" />
+        <span>价格为：{{money}}</span>
+    </div>-->
+    <script>
+        var demo = new Vue({
+            el: '#demo',
+            data: {
+                title: 'todos',
+            }
+        })
+        var demo2 = new Vue({
+            el: '#demo2',
+            data: {
+                message:'abc ',
+            },
+            filters: {
+                reverse:function (val) {
+                        return val+'这是过滤备注';
+                },
+            }
+        })
+        //var demo3 = new Vue({
+        //    el: '#demo3',
+        //    data: {
+        //        money: '12454',
+        //    },
+        //    filters: {
+        //        disPaly: {
+        //            // model -> view
+        //            // 在更新 `<input>` 元素之前格式化值
+        //            read: function (val) {
+        //                return '$' + val.toFixed(2)
+        //            },
+        //            // view -> model
+        //            // 在写回数据之前格式化值
+        //            write: function (val, oldVal) {
+        //                var number = +val.replace(/[^\d.]/g, '')
+        //                return isNaN(number) ? 0 : parseFloat(number.toFixed(2))
+        //            }
+        //        }
+        //    }
+        //})
+    </script>
+</body>
+</html>

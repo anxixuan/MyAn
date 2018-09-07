@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery.js"></script>
+    <script>
+        function ad() {
+            var DATA = '{ProductFirstId: "1", ProductName: "", PageIndex: 1}';
+            $.ajax({
+                type: "post",
+                url: "http://10.211.1.249:8003/api/Product/GetPKIList",
+
+                //欣春赢家味抽奖API
+                //url: "http://localhost:1477/api/HomeTastePacket/AddDishComment",
+
+                //测试链接
+                ////url: "http://192.168.8.35:8003/api/Product/GetSpecificationConf",
+               //url: "http://10.211.1.249:8003/api/Product/GetProductIdKuInfoRD",
+              
+                //正式
+               //url: "  http://shkapi4qas.shinho.net.cn/cts/ec/api/MySelfDishKu/SentTemplate",
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                data: DATA,
+                success: function (json) {
+                    console.log(json)
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+        }
+        function bingfa() {
+            for (var i = 0; i < 100; i++) {
+            //setTimeout(
+            //        function () {
+                       
+                            var d = Math.floor(Math.random() * 10000) + 19999;
+                            add(d);
+                    //    }
+                   
+                    //, 1000)
+                }
+        }
+        
+    </script>
+</head>
+<body>
+    
+    <button onclick="ad()">adsfasdf</button>
+    
+</body>
+</html>

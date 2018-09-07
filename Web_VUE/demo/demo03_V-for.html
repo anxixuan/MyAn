@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery.min.js"></script>
+    <script src="../JS/vue.js"></script>
+    <script src="../CSS/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+
+    <link href="../CSS/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div id="app">
+            <ul>
+                <li v-for="todo in todos">
+                    {{todo.text}}
+                </li>
+            </ul>
+            <table>
+                <tr v-for="todo in todos">
+                    <td>{{todo.text}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                todos: [
+                    { text: "Learn JavaScript" },
+                    { text: "Learn 学习" },
+                    { text: "Learn Vue.js" }                     
+                ]
+            },
+            ready:function() {
+                this.del()
+            },
+            methods: {
+                del: function () {
+                    this.todos.splice(2);
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

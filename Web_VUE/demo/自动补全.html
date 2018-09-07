@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>邮箱地址自动完成功能</title>
+    <meta http-equiv="content-type" content="text/html;charset=gb2312">
+    <style>
+        .demo p {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input {
+            padding: 12px;
+            width: 300px;
+            border: 1px solid #c2c2c2;
+            border-radius: 4px;
+            box-shadow: 0 0 1px #fff, inset 0 0 2px rgba(0,0,0,.15);
+            background-color: #F2F2F2;
+            font-size: 14px;
+        }
+
+        .emailist {
+            border: 1px solid #bdbdbd;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #666;
+            font-size: 14px;
+            list-style-type: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+            .emailist li {
+                padding: 2px 11px;
+                cursor: pointer;
+            }
+
+                .emailist .on, .emailist li:hover {
+                    background-color: #eee;
+                }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <p><input type="email" class="input inputMailList" name="email" placeholder="请输入邮箱" required autofocus autocomplete="off"></p>
+    </div>
+</body>
+</html>
+<script src="../JS/jquery.js"></script>
+<script src="../JS/jquery.mailAutoComplete-4.0.js"></script>
+<script type="text/javascript">
+    $(".inputMailList").mailAutoComplete();//使用方法
+</script>

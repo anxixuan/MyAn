@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery.js"></script>
+    <script src="../JS/JavaScript1.js"></script>
+</head>
+<body>
+    <a id="btn0"></a>
+    <input id="pageSize" type="text" size="1" maxlength="2" value="getDefaultValue()" /><a> 条 </a> <a href="#" id="pageSizeSet">设置</a>
+    <a id="sjzl"></a>
+    <a href="#" id="btn1">首页</a>
+    <a href="#" id="btn2">上一页</a>
+    <a href="#" id="btn3">下一页</a>
+    <a href="#" id="btn4">尾页</a>
+    <a>转到 </a>
+    <input id="changePage" type="text" size="1" maxlength="4" />
+    <a>页 </a>
+    <a href="#" id="btn5">跳转</a>
+    <table id="mytable" align="center">
+        <tbody>
+            <tr>
+                <th>用户编号</th>
+                <th>用户名</th>
+                <th>客户编码</th>
+                <th>领取积分</th>
+                <th>酒店名称</th>
+                <th>电话号码</th>
+                <th>是否分享</th>
+                <th>分享后被查看次数</th>
+            </tr>
+            <tr>
+                <td>10066</td>
+                <td>石磊</td>
+                <td></td>
+                <td>48</td>
+                <td>圣河湾茶餐厅对炉店</td>
+                <td>15141246222</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10073</td>
+                <td>杨彬</td>
+                <td></td>
+                <td>43</td>
+                <td>天时二部</td>
+                <td>18841222269</td>
+                <td>否</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>10082</td>
+                <td>石亮</td>
+                <td></td>
+                <td>13</td>
+                <td>关东大院</td>
+                <td>13050007068</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10088</td>
+                <td>陈萌萌</td>
+                <td></td>
+                <td>34</td>
+                <td>善之坊</td>
+                <td>13942696949</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10105</td>
+                <td>郝振怀</td>
+                <td></td>
+                <td>18</td>
+                <td>清泉大酒店</td>
+                <td>13306355102</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10111</td>
+                <td>刘廷雷</td>
+                <td></td>
+                <td>29</td>
+                <td>御龙宴喜</td>
+                <td>15965759115</td>
+                <td>是</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>10150</td>
+                <td>冯学勇</td>
+                <td></td>
+                <td>13</td>
+                <td>三立酒店</td>
+                <td>15006931088</td>
+                <td>否</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>10151</td>
+                <td>刘明</td>
+                <td></td>
+                <td>13</td>
+                <td>新皮口海鲜酒店</td>
+                <td>18604927172</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10172</td>
+                <td>刘佳兴</td>
+                <td></td>
+                <td>35</td>
+                <td>四海大酒店</td>
+                <td>13889727781</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10208</td>
+                <td>曲兆雷</td>
+                <td></td>
+                <td>16</td>
+                <td>刘和饭店</td>
+                <td>13954805884</td>
+                <td>否</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>10235</td>
+                <td>魏小霞</td>
+                <td></td>
+                <td>30</td>
+                <td>渤海明珠</td>
+                <td>13898075878</td>
+                <td>否</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>10240</td>
+                <td>柳</td>
+                <td></td>
+                <td>7</td>
+                <td>栖霞酒店</td>
+                <td>13616450875</td>
+                <td>否</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>10253</td>
+                <td>张红光</td>
+                <td></td>
+                <td>35</td>
+                <td>驴肉大饼</td>
+                <td>15054650960</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>10264</td>
+                <td>靳垄鑫</td>
+                <td></td>
+                <td>15</td>
+                <td>新世纪</td>
+                <td>13165110055</td>
+                <td>是</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>10266</td>
+                <td>屈维亮</td>
+                <td></td>
+                <td>42</td>
+                <td>圣河湾港式茶餐厅</td>
+                <td>13941948696</td>
+                <td>是</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>10267</td>
+                <td>贾礼</td>
+                <td></td>
+                <td>29</td>
+                <td>内部测试客户</td>
+                <td>18953530365</td>
+                <td>否</td>
+                <td>0</td>
+            </tr>
+     
+        </tbody>
+     </table>
+
+</body>
+</html>

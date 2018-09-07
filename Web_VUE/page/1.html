@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>iview example</title>
+    <script src="../JS/jquery.js"></script>
+    <script>
+        function alerts() {
+            var i = $("#ddd").val();
+            alert(i);
+            if (i == 1)
+                return false;
+            else
+                return true;
+        }
+    </script>
+</head>
+<body>
+    <input  id="ddd" value="1"/>
+    <a href="http://www.baidu.com" onclick=" return alerts()">前往百度</a>
+</body>
+</html>

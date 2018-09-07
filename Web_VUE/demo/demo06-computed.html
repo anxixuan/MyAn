@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery.min.js"></script>
+    <script src="../JS/vue.js"></script>
+    <script src="../CSS/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+
+    <link href="../CSS/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div id="demo6" style="margin-bottom:20px">{{fullName}} </div>
+       <div id="square">
+           <div>
+               正方形边长：{{a}}m
+           </div>
+           <input type="range" v-model="a"/>
+           <div>
+               正方形面积：{{s}}m<sup>2</sup>
+           </div>
+       </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#demo6',
+            data: {
+                firstName: 'Foo',
+                lastName: 'Bar',
+            },
+            computed: {
+                fullName: {
+                    //getter
+                    get: function () {
+                        return this.firstName+"  "+this.lastName
+                    },
+                    //setter
+                    set: function (newValue) {
+                        var names = newValue.split(' ')
+                        this.firstName = names[0]
+                        this.lastName=names[names.length-1]
+                    }
+                }
+            }
+        })
+        vm.$watch('firstName', function (val) {
+            this.fullName = val + ' ? ' + this.lastName
+        })
+        //求正方形面积
+        var vm2 =new Vue({
+            el: '#square',
+            data: {
+                a:1
+            },
+            computed: {
+                s: function () {
+                    return this.a * this.a;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

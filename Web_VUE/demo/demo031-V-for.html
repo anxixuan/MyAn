@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/vue.js"></script>
+    
+    <script src="../JS/jquery.js"></script>
+    <script>
+        function dd() {
+            debugger;
+            var d = 0;
+            $("#ddddd  #" + d).css('display', 'none');
+        }
+    </script>
+    
+</head>
+<body>
+    <ul id="example-2">
+        <li v-for="item in items">
+            {{ parentMessage }} - {{ $index }} - {{ item.message }}
+        </li>
+    </ul>
+    <table id="ddddd">
+        <tr v-for="item in items" id="{{$index}}" >
+            <td>item.message</td>
+        </tr>
+    </table>
+    <button v-on:click="p(),p2(parentMessage)">双函数</button>
+    <br />
+    <input v-model.lazy="parentMessage" />
+    <div >
+        {{parentMessage}}
+    </div>
+    <script>
+        var example2 = new Vue({
+            el: 'body',
+            data: {
+                parentMessage: 'Parent',
+                items: [
+                  { message: 'Foo' },
+                  { message: 'Bar' }
+                ]
+            },
+            methods: {
+                p: function () {
+                    this.parentMessage = '43',
+                    
+                    alert(1);
+                    setTimeout(this.p2(this.parentMessage), 500)
+                },
+                p2: function (dd) {
+                    alert(dd);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

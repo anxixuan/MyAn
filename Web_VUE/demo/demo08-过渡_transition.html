@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>过渡元素</title>
+    <link href="../CSS/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../CSS/css.css" rel="stylesheet" />
+    <script src="../JS/vue.js"></script>
+</head>
+<body>
+    <div class="container">
+        经常和V-if，v-show，v-for一起使用
+        <div class="left">
+            <div class="zhu">
+                CSS过渡
+            </div>
+                <div id="css1">
+                    <div id="anim">
+                        <span v-show="show" transition="bounce">Look at dazengzeng</span>
+                        <br />
+                        <button @click="show=!show">Toggle</button>
+                    </div>
+                    <style>
+                        .bounce-transition {
+                            display: inline-block;
+                        }
+
+                        .bounce-enter {
+                            -webkit-animation: bounce-in .5s;
+                            animation: bounce-in .5s;
+                        }
+
+                        .bounce-leave {
+                            -webkit-animation: bounce-out .5s;
+                            animation: bounce-out .5s;
+                        }
+
+                        @keyframes bounce-in {
+                            0% {
+                                -webkit-transform: scale(0);
+                                transform: scale(0);
+                            }
+
+                            50% {
+                                -webkit-transform: scale(1.5);
+                                transform: scale(1.5);
+                            }
+
+                            100% {
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+                        }
+
+                        @keyframes bounce-out {
+                            0% {
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+
+                            50% {
+                                -webkit-transform: scale(1.5);
+                                transform: scale(1.5);
+                            }
+
+                            100% {
+                                -webkit-transform: scale(0);
+                                transform: scale(0);
+                            }
+                        }
+
+                        @-webkit-keyframes bounce-in {
+                            0% {
+                                -webkit-transform: scale(0);
+                                transform: scale(0);
+                            }
+
+                            50% {
+                                -webkit-transform: scale(1.5);
+                                transform: scale(1.5);
+                            }
+
+                            100% {
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+                        }
+
+                        @-webkit-keyframes bounce-out {
+                            0% {
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+
+                            50% {
+                                -webkit-transform: scale(1.5);
+                                transform: scale(1.5);
+                            }
+
+                            100% {
+                                -webkit-transform: scale(0);
+                                transform: scale(0);
+                            }
+                        }
+                    </style>
+                    <script>
+                    new Vue({
+                        el: '#anim',
+                        data: { show: true }
+                    })
+                    </script>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

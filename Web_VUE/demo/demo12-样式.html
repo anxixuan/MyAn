@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../CSS/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../CSS/css.css" rel="stylesheet" />
+    <script src="../JS/vue.js"></script>
+    <style>
+        .static {
+            background-color:yellow;
+            margin:10px 0px 10px 0px;
+
+        }
+        .classA {
+            border: 1px solid red;
+            font-size: 40px;
+        }
+        .classB {
+            color:red;
+            font-size:50px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="class1" class="static" @click="classIs" v-bind:class="{'classA':isA,'classB':isB}">
+            Class 样式
+        </div>
+        <script>
+            new Vue({
+                el: '#class1',
+                data: {
+                    isA: false,
+                    isB: true
+                },
+                methods: {
+                    classIs: function () {
+                        this.isA = !this.isA;
+                        this.isB = !this.isB;
+                    }
+                }
+            })
+        </script>
+        <div v-bind:style="styleObject" id="style1">
+            Style样式
+        </div>
+        <script>
+            new Vue({
+                el: '#style1',
+                data: {
+                    
+                    styleObject: {
+                        color: 'red',
+                        fontSize:'50px'
+                    }
+                }
+            })
+        </script>
+    </div>
+
+</body>
+</html>

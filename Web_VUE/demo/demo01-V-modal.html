@@ -1,0 +1,18 @@
+﻿select distinct top 6 sCVC.VCId,sCVC.IsDisplay,sCVC.PriorityId,sCVC.UpdateTime,s.SpecificationId,s.Amount,s.Unit,s.VisitCount
+--, PKI.ProductName
+--,case when sPL.Id is null then 'f' else 't' end as IsPraise
+----虚拟分类跟规格配置关联表，获取虚拟分类 序号，是否显示，排列情况,更新时间
+from (select * from  SpecificationConfVC where VCId=1)as sCVC
+----规格配置跟规格关联表,获取配置信息跟规格
+--left join SpecificationConf as sC on sCVC.SpecificationConfId=sCVC.SpecificationConfId
+------获取规格 规格，大小
+--left join Specification as s on s.SpecificationId=sC.SpecificationId
+
+left join (select * from SpecificationConf as sC left join Specification as s  on s.SpecificationId=sC.SpecificationId) as sConf
+
+----获取产品名字
+left join ProductKuInfo as PKI on PKI.ProductId=sConf.ProductId
+----是否点赞
+left join (select * from SpecificationPraiseLog where OpenId='11') as sPL on sConf.SpecificationId=sPL.SpecificationId
+
+where sCVC.VCId=1

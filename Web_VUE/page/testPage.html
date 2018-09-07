@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Vue分页测试</title>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/vue-resource.min.js"></script>
+    <script src="../JS/iview.js"></script>
+    <link href="../CSS/iview11.css" rel="stylesheet" />
+</head>
+<body>
+    <table >
+        <thead>
+            <tr>
+                <th>序号</th>
+        </thead>
+        <tbody>
+            <tr v-for="aa in da">
+                <td>
+                    {{aa.Amount}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <page v-on:on-change="ChangePage" v-bind:current="index" v-bind:page-size.sync="rows" v-bind:total="page" show-elevator></page>
+    <script>
+        new Vue({
+            el: 'body',
+            data: {
+                da: [],
+                index: 1,
+                page:0
+            },
+            ready:function() {
+                this.getLuckyMoneyUsedAnalyse()
+            },
+            methods: {
+                getdata: function () {
+
+                },
+                getLuckyMoneyUsedAnalyse: function () {
+                    var sharelink = "/luckymoney/get/13?";
+                    var sharelink2 = "/LuckyMoney/ShareMore/13?";
+                    
+                    this.$http.post('http://localhost:3705/LuckyMoney/getUsedAnalyse', {
+                        LuckyMoneyId: 13,
+                        a: sharelink,
+                        b: sharelink2
+                    }, {
+                        emulateJSON: true
+                    }).then(function (res) {
+                        this.da = res.data;
+                        this.page = this.da.length;
+                    }, function (res) {
+                        alert(res.status);
+                    })
+                },
+                ChangePage: function (current) {
+                    this.index = current;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

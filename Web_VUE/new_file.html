@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="mobile-select-area.css"/>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="dialog.js"></script>
+		<link rel="stylesheet" type="text/css" href="dialog.css" />
+		<script type="text/javascript" src="mobile-select-area.js"></script>
+	</head>
+	<body>
+		<input type="text" id="txt_area2" data-value="1,1,2" value="" readonly="readonly">
+		<script>
+			
+				var json =[{
+		"id": 1,
+		"name": "浙江省",
+		"child": [{
+			"id": "1",
+			"name": "杭州市",
+			"child": [{
+				"id": 1,
+				"name": "滨江区"
+			}, {
+				"id": 2,
+				"name": "西湖区"
+			}, {
+				"id": 3,
+				"name": "余杭区"
+			}, {
+				"id": 4,
+				"name": "留下区"
+			}]
+		}, {
+			"id": "2",
+			"name": "宁波市",
+			"child": []
+		}, {
+			"id": "3",
+			"name": "温州市",
+			"child": []
+		}]
+	}, {
+		"id": 2,
+		"name": "江苏省",
+		"child": [{
+			"id": "1",
+			"name": "南京",
+			"child": [{
+				"id": 1,
+				"name": "解放区"
+			}]
+		}]
+	}, {
+		"id": 3,
+		"name": "湖北省"
+	}];
+				var selectArea2 = new MobileSelectArea();
+
+				selectArea2.init({trigger:'#txt_area2',value:$('#txt_area2').data('value'),text:['浙江省','杭州市','西湖区'],data:json,eventName:'click'});
+		
+		</script>
+		
+	</body>
+</html>

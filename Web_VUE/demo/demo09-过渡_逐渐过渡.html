@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Vue.js过渡</title>
+    <link href="../CSS/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../CSS/css.css" rel="stylesheet" />
+    <script src="../JS/vue.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="left">
+            <div class="zhu">CSS过渡</div>
+            <div id="demo">
+                <input v-model="query">
+                <ul>
+                    <li v-for="item in list | filterBy query"
+                        transition="staggered"
+                        stagger="100">
+                        {{item.msg}}
+                    </li>
+                </ul>
+            </div>
+            <script>
+                new Vue({
+                    el: '#demo',
+                    data: {
+                        query: '',
+                        list: [
+                            { msg: 'Bruce Lee' },
+                            { msg: 'Jackie Chan' },
+                            { msg: 'Chuck Norris' },
+                            { msg: 'Jet Li' },
+                            { msg: 'Kung Fury' }
+                        ]
+                    }
+                })
+            </script>
+        </div>
+    </div>
+</body>
+</html>

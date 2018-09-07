@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFA2F2CF-62D5-45E5-924A-505C796F03D3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web_VUE</RootNamespace>
+    <AssemblyName>Web_VUE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\demo1.html" />
+    <Content Include="bootstrap\Login.html" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\css\bootstrap-theme.css.map" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\css\bootstrap.css.map" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="CSS\fonts\ionicons.ttf" />
+    <Content Include="CSS\fonts\ionicons.woff" />
+    <Content Include="demo\vuejs三级联动.html" />
+    <Content Include="demo\自动补全.html" />
+    <Content Include="dialog.css" />
+    <Content Include="dialog.js" />
+    <Content Include="jquery.js" />
+    <Content Include="JS\vue-resource.min.js" />
+    <Content Include="mobile-select-area.css" />
+    <Content Include="mobile-select-area.js" />
+    <Content Include="new_file.html" />
+    <Content Include="new_file.js" />
+    <Content Include="PagerTest\html\Pager2.html" />
+    <Content Include="PagerTest\lib\vue-resource.min.js" />
+    <Content Include="PagerTest\lib\bootstrap\.bower.json" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="PagerTest\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="PagerTest\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="PagerTest\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="PagerTest\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="PagerTest\lib\bootstrap\LICENSE" />
+    <Content Include="PagerTest\lib\jquery-validation-unobtrusive\.bower.json" />
+    <Content Include="PagerTest\lib\jquery-validation\.bower.json" />
+    <Content Include="PagerTest\lib\jquery-validation\LICENSE.md" />
+    <Content Include="PagerTest\lib\jquery\.bower.json" />
+    <Content Include="PagerTest\lib\jquery\dist\jquery.min.map" />
+    <Content Include="JS\jquery.mailAutoComplete-4.0.js" />
+    <Content Include=".DS_Store" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\bootstrap-3.3.5-dist\css\bootstrap-theme.css" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\css\bootstrap-theme.min.css" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\css\bootstrap.css" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\css\bootstrap.min.css" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\js\bootstrap.js" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\js\bootstrap.min.js" />
+    <Content Include="CSS\bootstrap-3.3.5-dist\js\npm.js" />
+    <Content Include="CSS\css.css" />
+    <Content Include="demo\a.html" />
+    <Content Include="demo\demo01-V-modal.html" />
+    <Content Include="demo\demo02-V-bind.html" />
+    <Content Include="demo\demo03_V-for.html" />
+    <Content Include="demo\demo04-V-on-增加删除.html" />
+    <Content Include="demo\demo05-computed.html" />
+    <Content Include="demo\demo06-computed.html" />
+    <Content Include="demo\demo031-V-for.html" />
+    <Content Include="demo\demo11-综合-FromCollBind_demo.html" />
+    <Content Include="demo\demo12-样式.html" />
+    <Content Include="demo\demo13-过滤.html" />
+    <Content Include="demo\demo10组件.html" />
+    <Content Include="demo\demo08-过渡_transition.html" />
+    <Content Include="demo\demo09-过渡_逐渐过渡.html" />
+    <Content Include="demo\job2.html" />
+    <Content Include="demo\伪分页.html" />
+    <Content Include="demo\伪分页2.html" />
+    <Content Include="demo\分页.html" />
+    <Content Include="CSS\iview11.css" />
+    <Content Include="JS\iview.js" />
+    <Content Include="JS\iview.min.js" />
+    <Content Include="JS\JavaScript1.js" />
+    <Content Include="JS\jquery.js" />
+    <Content Include="JS\jquery.min.js" />
+    <Content Include="JS\laypage\laypage.js" />
+    <Content Include="JS\laypage\skin\laypage.css" />
+    <Content Include="JS\vue.js" />
+    <Content Include="JS\vue.min.js" />
+    <Content Include="PagerTest\css\site.css" />
+    <Content Include="PagerTest\css\site.min.css" />
+    <Content Include="PagerTest\html\PagerTest.html" />
+    <Content Include="PagerTest\js\site.js" />
+    <Content Include="PagerTest\js\site.min.js" />
+    <Content Include="PagerTest\lib\avalon.js" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="PagerTest\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="PagerTest\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="PagerTest\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="PagerTest\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="PagerTest\lib\bootstrap\dist\js\npm.js" />
+    <Content Include="PagerTest\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="PagerTest\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="PagerTest\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="PagerTest\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="PagerTest\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="PagerTest\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="PagerTest\lib\jquery\dist\jquery.js" />
+    <Content Include="PagerTest\lib\jquery\dist\jquery.min.js" />
+    <Content Include="PagerTest\lib\jquery\LICENSE.txt" />
+    <Content Include="PagerTest\lib\vue.js" />
+    <Content Include="page\1.html" />
+    <Content Include="page\APIPost.html" />
+    <Content Include="page\testPage.html" />
+    <Content Include="page\上传图片.html" />
+    <Content Include="Pic\12.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1867</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1867/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

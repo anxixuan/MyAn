@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery.js"></script>
+    <script src="../JS/vue.js"></script>
+    <style>
+        .a {
+            width: 60%;
+            height: 25px;
+            line-height: 25px;
+            margin-top: 10px;
+            border: none;
+            background: none;
+            float: right;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <button v-on:click="reverMes">Reverse Message</button>
+        <input v-on:blur="text" type="text" id="dee" />
+        <input class="a" v-on:blur="IsPhone" type="text" name="phone" id="phone" placeholder="请输入手机号码">
+       //离开 blur
+        //焦点focus
+    </div>
+
+
+
+    <br />
+    <div id="app1">
+        <input v-model="newTodo" v-on:keyup.enter="addTodo" />
+        <ul>
+            <li v-for="todo in todos">
+                <span>{{todo.text}}</span>
+                <button v-on:click="removeTodo($index)">x</button>
+                
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message: "Hell Vue.js!"
+            },
+            methods: {
+                reverMes: function () {
+                    this.message = this.message.split('').reverse().join('')
+                },
+                text: function () {
+                    var regex = "^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$";
+                    var phoneh = $("#dee").val().trim();
+                    if (phoneh.match(regex)!=null)
+                    {
+                        alert("格式正确")
+                    }
+                    else
+                        alert("adsfasdfasdf")
+                },
+                IsPhone: function () { alert("asdfasdfsdaf")}
+            }
+        });
+        new Vue({
+            el: "#app1",
+            data: {
+                newTodo: "",
+                todos: [{
+                    text:'Add some todos'
+                }]
+            },
+            methods: {
+                addTodo: function () {
+                    var text = this.newTodo.trim()
+                    if (text) {
+                        this.todos.push({ text: text })
+                        this.newTodo = ''
+                    }
+                },
+                removeTodo: function (index) {
+                    this.todos.splice(index,1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

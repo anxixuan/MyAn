@@ -1,0 +1,30 @@
+﻿
+.left {
+    margin-bottom:20px
+}
+.zhu {
+    margin-bottom:10px;
+    margin-top:10px;
+    color:red;
+    font-size:larger;
+}
+h1 {
+    margin-bottom:10px;
+    margin-top:10px;
+    font-size:large;
+    font-family:'Microsoft YaHei' 
+}
+ul {
+    padding-left: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.staggered-transition {
+    transition: all .5s ease;
+    overflow: hidden;
+    margin: 0;
+    height: 20px;
+}
+.staggered-enter, .staggered-leave {
+    opacity: 0;
+    height: 0;
+}

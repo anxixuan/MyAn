@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Vue.js组件</title>
+    <link href="../CSS/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../CSS/css.css" rel="stylesheet" />
+    <script src="../JS/vue.js"></script>
+    <style>
+        .gray {
+            background-color: #CCCCCC;
+            color: red;
+        }
+        .for {
+            font-size:larger
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="example1">
+            <div class="zhu">
+                组件开发
+            </div>
+            <my-component></my-component>
+            <my-component></my-component>
+            <script>
+                //定义
+                var Mycomponent = Vue.extend({
+                    template: '<div>A coustom component ！</div>'
+                })
+                //注册
+                Vue.component('my-component', Mycomponent);
+                //创建根实例
+                new Vue({
+                    el: '#example1'
+                })
+            </script>
+        </div>
+        <div id="box">
+            <input type="text" v-model="t1" v-on:fcous.stop="aText" v-on:change="aText" v-on:keyup="get()"  />
+            <ul >
+                <li v-for="value in myData" v-bind:class="{gray:$index==now,for:tr}" v-on:click="getIndex($index)">
+                    {{value}}
+                </li>
+            </ul>
+            <script>
+                new Vue({
+                    el:'#box',
+                    data:{
+                        myData:["dddd","测试"],
+                        t1:'',
+                        now: -1,
+                    },
+                    methods:{
+                        get:function(){
+                            this.myData=["dddd","测试"];
+                        },
+                        changeDown: function () {
+                            this.now++;
+                            if (this.now > this.myData.length-1)
+                                this.now = 0;
+                        },
+                        getIndex: function (e) {
+                            this.now = e;
+                            this.t1=this.myData[e]
+                        },
+                        aText: function () {
+                            alert(1);
+                        }
+
+                    }
+                })
+            </script>
+        </div>
+    </div>
+</body>
+</html>

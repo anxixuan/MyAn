@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>VUE</title>
+    <script src="../JS/vue.js"></script>
+</head>
+<body>
+    <div id="demo2">
+        <img title="{{name}}" :src="url">
+        <br />
+        <input v-model="name">
+        <br />
+        <input v-model="url">
+        <br />
+        <div>
+            <img src="https://www.taobao.com/favicon.ico" title="淘宝" />
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#demo2',
+            data: {
+                name: '淘宝',
+                url: 'https://www.taobao.com/favicon.ico'
+            }
+        })
+    </script>
+</body>
+</html>
