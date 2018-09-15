@@ -6,10 +6,10 @@
     <script src="../JS/jquery.js"></script>
     <script>
         function ad() {
-            var DATA = '{"Title":"标题66666","SubjectContent":"这是正文","Longitude":"32.54","Latitude":"56.21","LocationName":"北京.颐和园","UserId":123,"UploadDateTime":"2018-10-10","ModifyUserId":123,"ModifyDateTime":"2018-10-10","Remark":"备注"}';
+            var DATA = '{}';
             $.ajax({
                 type: "post",
-                url: "http://localhost:5360/ContentECApi/ContentEC/AddSubject",
+                url: "http://localhost:5360/ContentECApi/ContentEC/GetSubjectPic",
                 contentType: "application/json; charset=utf-8",
                 dataType: 'json',
                 data: DATA,
